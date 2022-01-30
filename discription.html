@@ -1,0 +1,137 @@
+<div>
+    <ul><li><h2>Main areas of duct cleaning</h2></li>
+    <li>canopies</li>
+  <li>Head cleaning</li>
+  <li> Grease filtess</li></ul>
+  </div>
+
+
+  <script>
+    const restaturant = {
+      name: 'Italiano Restaurant',
+      location: "Rue des Amis",
+      catagories: ['Focal','Garlic','Brusho'],
+      starterMenu: ['Italian, Pizzaria','Garlic'],
+      maimMenu: ['pizza','pasta', 'Risotto'],
+      order: function(starter,main){
+        return [this.starterMenu[starter], this.maimMenu[main]]
+        },
+      workingHours: {
+        mon: {
+          open: '10hr',
+          close: ' 17hr'
+
+        },
+       thu: {
+          open: '10hr',
+          close: ' 17hr'
+
+        },
+        wed: {
+          open: '10hr',
+          close: ' 17hr'
+
+        },
+        thr: {
+          open: '10hr',
+          close: ' 17hr'
+
+        },
+        fri: {
+          open: '10hr',
+          close: ' 17hr'
+
+        }
+
+      }
+
+    }
+
+
+    // Distructuring array
+    //distructuring 
+    const [first,,third]= restaturant.catagories;
+    console.log(restaturant.order(0,0))
+    console.log(first,third)
+
+    // distructuring nested array
+    
+    const nested = [ 1,2, [3,6]]
+    const [firstnest, ,secondnest] = nested
+    const [i,,[j,k]] = nested
+    console.log (i,j,k)
+    console.log(firstnest,secondnest)
+
+
+    // Distructuring object 
+    //** specifying
+    // the name of the vars used is must
+
+    const {name,catagories} = restaturant;
+
+    //if we want other name to use since using the priveous name is must
+
+    const {name: restuarntName, catagories: resturantcCata} = restaturant
+
+    console.log("I am ", restuarntName)
+
+
+    //spread operator
+    //whenever we need all the indiviaual elements 
+     const arr= [5,6,7]
+    const arr1= [1,2,3,...arr]
+    console.log(arr1)
+
+
+ 
+ const rest2 = {
+   name: ethiopish2,
+   owner: Sarem
+ }
+
+ rest1.numGuest ? rest1.numGuest :10;
+ rest1.numGuest = rest1.numGuest || 10
+
+ const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
+ const [player1, player2] = game.players;
+ console.log(player1,player2)
+  </script>
